@@ -37,6 +37,12 @@ const handler = NextAuth({
 
     // Add other providers here
   ],
+  callbacks: {
+    session({ session, user }) {
+      session.user.email = "kminchelle@qq.com";
+      return session;
+    },
+  },
   // Additional NextAuth configuration...
 });
 
