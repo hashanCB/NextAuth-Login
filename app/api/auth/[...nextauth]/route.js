@@ -4,6 +4,9 @@ import CredentialsProvider from "next-auth/providers/credentials";
 
 // Initialize NextAuth with configuration
 const handler = NextAuth({
+  session: {
+    strategy: "jwt",
+  },
   providers: [
     CredentialsProvider({
       // Example using a credentials provider
@@ -31,6 +34,7 @@ const handler = NextAuth({
         }
       },
     }),
+
     // Add other providers here
   ],
   // Additional NextAuth configuration...
