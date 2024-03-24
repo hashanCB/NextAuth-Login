@@ -37,6 +37,7 @@ const handler = NextAuth({
 
     // Add other providers here
   ],
+  // Add Rolse base
   callbacks: {
     session({ session, user }) {
       session.user.email = "kminchelle@qq.com";
